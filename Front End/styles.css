@@ -1,0 +1,276 @@
+body,
+html {
+    direction: rtl;
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url("./images/banner.png");
+    height: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.textImage {
+    width: 350px;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.hero-text2 {
+    text-align: center;
+    position: relative;
+    top: 92%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.hero-image .hero-text h1 {
+    font-size: 25px;
+}
+
+.hero-text button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #003D6A;
+    text-align: center;
+    cursor: pointer;
+}
+
+.hero-text button:hover {
+    background-color: #fff;
+    color: #003D6A;
+}
+
+.MBottons2,
+.MBottons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.MBottons2 a,
+.MBottons a {
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    padding: 2px 8px 8px;
+    font-size: 14px;
+}
+
+.MBottons a {
+    color: #fff;
+    background-color: #003D6A;
+    font-weight: 600;
+}
+
+.MBottons2 a {
+    color: #003D6A;
+    background-color: #DCA84E;
+}
+
+/* Add this to your styles.css file or in the head section */
+#search-form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#searchForm input:focus-visible {
+    outline: 2px solid #003D6A;
+}
+
+#searchInput {
+    padding: 8px;
+    border: none;
+    width: 85%;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#result-container {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#pagination .page-item {
+    cursor: pointer;
+}
+
+#pagination .page-item:active {
+    background-color: #dee2e6;
+}
+
+.buttons_box {
+    display: flex;
+    padding-top: 30px;
+    justify-content: space-between;
+}
+
+.head_tag {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.head_tag h2 {
+    background-color: #003D6A;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 20px;
+    width: auto;
+}
+
+#searchResults {
+    padding-top: 30px;
+    text-align: center;
+    align-items: center;
+}
+
+#searchResults ul {
+    list-style-type: none;
+}
+
+#searchResults ul li {
+    margin-bottom: 10px;
+}
+
+#StemForm button,
+#cleanForm button {
+    background-color: #003D6A;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+}
+
+.Btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: #003D6A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.11);
+}
+
+.svgIcon {
+    fill: #fff;
+}
+
+.icon2 {
+    width: 18px;
+    height: 5px;
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+
+.tooltip {
+    position: absolute;
+    right: -105px;
+    opacity: 0;
+    background-color: rgb(12, 12, 12);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .2s;
+    pointer-events: none;
+    letter-spacing: 0.5px;
+}
+
+.tooltip::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: rgb(12, 12, 12);
+    background-size: 1000%;
+    background-position: center;
+    transform: rotate(45deg);
+    left: -5%;
+    transition-duration: .3s;
+}
+
+.Btn:hover .tooltip {
+    opacity: 1;
+    transition-duration: .3s;
+}
+
+.Btn:hover {
+    background-color: #DCA84E;
+    transition-duration: .3s;
+}
+
+.Btn:hover .icon2 {
+    border-bottom: 2px solid rgb(235, 235, 235);
+    border-left: 2px solid rgb(235, 235, 235);
+    border-right: 2px solid rgb(235, 235, 235);
+}
+
+.Btn:hover .svgIcon {
+    fill: rgb(255, 255, 255);
+    animation: slide-in-top 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.btnx {
+    display: flex;
+    gap: 10px;
+}
+
+.ex_buttonBox {
+    padding-top: 18px;
+}
+
+.ex_buttonBox button {
+    background-color: #003D6A;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    float: right;
+}
