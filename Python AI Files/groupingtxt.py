@@ -15,7 +15,7 @@ import pandas as pd
 
 # define the corpus
 corpus=[]
-f=open('data/contexts.txt',encoding='utf-8')  
+f=open('data/contexts.txt')  
 c='1'
 while(c!=''):
     c = f.readline()
@@ -33,7 +33,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 
 countvec = CountVectorizer()
 countvecfit = countvec.fit_transform(corpus)
-bagofwords = pd.DataFrame(countvecfit.toarray(),columns=countvec.get_feature_names_out())
+bagofwords = pd.DataFrame(countvecfit.toarray(),columns=countvec.get_feature_names())
 bagofwords
 
 
